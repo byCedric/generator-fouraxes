@@ -82,7 +82,11 @@ module.exports = yeoman.generators.Base.extend({
 				'build/_index.html': 'build/index.html',
 				'app/_index.html': 'app/index.html',
 				'app/_main.scss': 'app/styles/main.scss',
-				'app/_main.js': 'app/scripts/main.js'
+				'app/_main.js': 'app/scripts/main.js',
+				'app/_model.js': 'app/scripts/model.js',
+				'app/_view.js': 'app/scripts/view.js',
+				'app/_collection.js': 'app/scripts/collection.js',
+				'app/_router.js': 'app/scripts/router.js'
 			}, this);
 		},
 
