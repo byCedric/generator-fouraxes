@@ -7,6 +7,6 @@ requirejs.config({
 		'backbone'   : '../../bower_components/backbone/backbone',
 		'handlebars' : '../../bower_components/handlebars/handlebars',
 		'text'       : '../../bower_components/text/text',
-		'hbs'        : '../../bower_components/requirejs-hbs/hbs'
+		'hbs'        : '../../bower_components/require-handlebars-plugin/hbs'
 	}
 });
