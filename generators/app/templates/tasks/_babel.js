@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 			files: [{
 				expand: true,
 				cwd: 'app',
-				src: 'scripts/**/*.{js,hbs}',
+				src: 'scripts/**/*.js',
 				dest: '.tmp'
 			}]
 		}
