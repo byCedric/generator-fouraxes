@@ -27,4 +27,5 @@ module.exports = Subgenerator.extend({
 	writing: function () {
 		this.copyTemplate('_model.js', 'app/scripts/models/'+ this.getFileFrom(this.name, '.js'));
 	}
+
 });
