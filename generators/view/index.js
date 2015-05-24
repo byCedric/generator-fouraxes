@@ -43,7 +43,6 @@ module.exports = Subgenerator.extend({
 	initializing: function () {
 		if (this.options.withTemplate) {
 			this.options.template = this.getFileFrom(this.name);
-			this.composeWith('fouraxes:template', { args: [this.options.template] });
 		}
 	},
 
@@ -54,6 +53,10 @@ module.exports = Subgenerator.extend({
 	 */
 	writing: function () {
 		this.copyTemplate('_view.js', 'app/scripts/views/'+ this.getFileFrom(this.name, '.js'));
+
+		if (this.options.withTemplate) {
+			this.composeWith('fouraxes:template', { args: [this.options.template] });
+		}
 	}
 
 });
