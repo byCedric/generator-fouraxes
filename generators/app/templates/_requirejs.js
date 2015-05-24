@@ -7,6 +7,14 @@ requirejs.config({
 		'backbone'   : '../../bower_components/backbone/backbone',
 		'handlebars' : '../../bower_components/handlebars/handlebars',
 		'text'       : '../../bower_components/text/text',
-		'hbs'        : '../../bower_components/require-handlebars-plugin/hbs'
-	}
+		// do not load requirejs-hbs's old handlebar-compiler dependency...
+		'handlebars-compiler': 'empty:'
+	},
+	packages: [
+		{
+			name: 'hbs',
+			location: '../../bower_components/requirejs-hbs',
+			main: 'hbs'
+		}
+	]
 });

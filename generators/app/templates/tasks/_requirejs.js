@@ -7,7 +7,9 @@ module.exports = function (grunt) {
 				// change the base url to the ES5 scripts
 				baseUrl: '.tmp/scripts',
 				// use almond as production AMD driver
-				name: '../../bower_components/almond/almond',
+				include: ['main', '../../bower_components/almond/almond'],
+				// run the main module, when everything is ready
+				insertRequire: ['main'],
 				// we want everything as small as possible
 				optimize: 'uglify2',
 				// wrap the whole in a single AMD module
