@@ -19,6 +19,6 @@ module.exports = function (grunt) {
 	 * Various grunt tasks
 	 */
 	grunt.registerTask('default', ['build', 'connect:development', 'watch']);
-	grunt.registerTask('compile', ['build', 'requirejs:production', 'sass:production']);
+	grunt.registerTask('compile', ['build', 'copy:templates', 'requirejs:production', 'clean:templates', 'sass:production']);
 	grunt.registerTask('serve', ['compile', 'connect:production']);
 };

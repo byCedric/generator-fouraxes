@@ -69,7 +69,9 @@ module.exports = yeoman.generators.Base.extend({
 		grunt: function () {
 			makeFiles({
 				'tasks/_babel.js': 'tasks/babel.js',
+				'tasks/_clean.js': 'tasks/clean.js',
 				'tasks/_connect.js': 'tasks/connect.js',
+				'tasks/_copy.js': 'tasks/copy.js',
 				'tasks/_jscs.js': 'tasks/jscs.js',
 				'tasks/_jshint.js': 'tasks/jshint.js',
 				'tasks/_requirejs.js': 'tasks/requirejs.js',
