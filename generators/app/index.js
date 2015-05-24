@@ -22,6 +22,7 @@ var makeFiles = function (files, that) {
 };
 
 module.exports = yeoman.generators.Base.extend({
+
 	prompting: function () {
 		var done = this.async();
 
@@ -112,4 +113,5 @@ module.exports = yeoman.generators.Base.extend({
 	install: function () {
 		this.installDependencies();
 	}
+
 });

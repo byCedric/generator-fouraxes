@@ -1,7 +1,6 @@
 'use strict';
 
 var Subgenerator = require('../../helpers/subgenerator.js');
-var _ = require('lodash');
 
 module.exports = Subgenerator.extend({
 
@@ -21,17 +20,17 @@ module.exports = Subgenerator.extend({
 
 		this.option('template', {
 			type: String,
-			desc: 'The view\'s template, ignored when creating template.'
+			desc: 'The view\'s template, ignored when creating template'
 		});
 
 		this.option('className', {
 			type: String,
-			desc: 'The class of the view\'s root element.'
+			desc: 'The class of the view\'s root element'
 		});
 
 		this.option('tagName', {
 			type: String,
-			desc: 'The tag of the view\'s root element.'
+			desc: 'The tag of the view\'s root element'
 		});
 	},
 

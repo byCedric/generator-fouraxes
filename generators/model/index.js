@@ -17,6 +17,11 @@ module.exports = Subgenerator.extend({
 			type: String,
 			desc: 'The model\'s (root) URL'
 		});
+
+		this.option('withCollection', {
+			type: Boolean,
+			desc: 'Create a collection, with the name of the model, too'
+		});
 	},
 
 	/**
@@ -26,6 +31,16 @@ module.exports = Subgenerator.extend({
 	 */
 	writing: function () {
 		this.copyTemplate('_model.js', 'app/scripts/models/'+ this.getFileFrom(this.name, '.js'));
+
+		if (this.options.withCollection) {
+			this.composeWith('fouraxes:collection', {
+				args: [this.name],
+				options: {
+					url: this.options.url,
+					model: this.name
+				}
+			});
+		}
 	}
 
 });

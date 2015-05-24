@@ -20,7 +20,12 @@ module.exports = Subgenerator.extend({
 
 		this.option('model', {
 			type: String,
-			desc: 'The model to use for each collection\'s item'
+			desc: 'The model to use for each collection\'s item, ignored when creating model'
+		});
+
+		this.option('withModel', {
+			type: Boolean,
+			desc: 'Create a model, with the name of the collection, too'
 		});
 	},
 
@@ -32,6 +37,10 @@ module.exports = Subgenerator.extend({
 	initializing: function () {
 		// sanitize the model input, we also don't need an extension
 		this.options.model = this.getFileFrom(this.options.model || '');
+
+		if (this.options.withModel) {
+			this.options.model = this.getFileFrom(this.name);
+		}
 	},
 
 	/**
@@ -41,6 +50,15 @@ module.exports = Subgenerator.extend({
 	 */
 	writing: function () {
 		this.copyTemplate('_collection.js', 'app/scripts/collections/'+ this.getFileFrom(this.name, '.js'));
+
+		if (this.options.withModel) {
+			this.composeWith('fouraxes:model', {
+				args: [this.options.model],
+				options: {
+					url: this.options.url
+				}
+			});
+		}
 	}
 
 });
