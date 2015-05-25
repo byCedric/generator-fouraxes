@@ -41,7 +41,7 @@ When you only want to check your code for errors, using jshint and jscs, `grunt 
 ## Subgenerators
 The Fouraxes generator contains the following subgenerators.
 
-> Note, each subgenerator requires a name. This name **MAY** be relative.
+> Note, each subgenerator requires a name (primary argument). This name **MAY** be relative.
 
 
 ### Model
@@ -56,6 +56,8 @@ option             | type      | description
 ### View
 The view generator will create a view, within _app/scripts/views_.
 
+> Note, the _template_ option is ignored when using _withTemplate_.
+
 option           | type      | description
 ---              | ---       | ---
 **className**    | _String_  | The class of the view's root element.
@@ -63,19 +65,17 @@ option           | type      | description
 **template**     | _String_  | The view's template, relative to the _app/scripts/templates_ folder.
 **withTemplate** | _Boolean_ | Create a template, with the name of the view, too.
 
-> Note, the _template_ option is ignored when using _withTemplate_.
-
 
 ### Collection
 The collection generator will create a collection, within _app/scripts/collections_.
+
+> Note, the _model_ option is ignored when using _withModel_.
 
 option        | type      | description
 ---           | ---       | ---
 **url**       | _String_  | The collection's (root) URL.
 **model**     | _String_  | The collection's model, relative to the _app/scripts/models_ folder.
 **withModel** | _Boolean_ | Create a model, with the name of the collection, too.
-
-> Note, the _model_ option is ignored when using _withModel_.
 
 
 ### Template
