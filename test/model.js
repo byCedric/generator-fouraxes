@@ -3,10 +3,21 @@
 var path = require('path');
 var assert = require('yeoman-generator').assert;
 var helpers = require('yeoman-generator').test;
+var generators = require('yeoman-generator').generators;
+var sinon = require('sinon');
 
 describe('Fouraxes:generators/model', function () {
 	before(function (done) {
+		this.spy = sinon.spy();
+
+		var collectionGenerator = generators.Base.extend({
+			exec: this.spy
+		});
+
 		helpers.run(path.join(__dirname, '../generators/model'))
+			.withGenerators([
+				[collectionGenerator, 'fouraxes:collection']
+			])
 			.withArguments('test/that')
 			.withOptions({
 				skipInstall: true,
@@ -18,9 +29,10 @@ describe('Fouraxes:generators/model', function () {
 	});
 
 	it('creates files', function () {
-		assert.file([
-			'app/scripts/models/test/that.js',
-			'app/scripts/collections/test/that.js'
-		]);
+		assert.file(['app/scripts/models/test/that.js']);
+	});
+
+	it('runs collection generator', function () {
+		assert(this.spy.calledOnce);
 	});
 });

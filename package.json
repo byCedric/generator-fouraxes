@@ -1,6 +1,6 @@
 {
 	"name": "generator-fouraxes",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"description": "Battle the web with Backbone, Handlebars, RequireJS and Harmony!",
 	"license": "MIT",
 	"main": "app/index.js",
@@ -26,6 +26,7 @@
 		"lodash": "^3.9.1"
 	},
 	"devDependencies": {
-		"mocha": "*"
+		"mocha": "^2.2.5",
+		"sinon": "^1.14.1"
 	}
 }
