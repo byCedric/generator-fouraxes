@@ -49,13 +49,12 @@ When you only want to check your code for errors, using jshint and jscs, `grunt 
 --- ---
 
 ## Subgenerators
-The Fouraxes generator contains the following subgenerators.
+The Fouraxes generator contains the following subgenerators. Use it by typing `yo fouraxes:_subgenerator_ _name_`.
 
 > Note, each subgenerator requires a name (primary argument). This name **MAY** be relative.
 
 
 ### Model
-`yo fouraxes:model ...`
 The model generator will create a model, within _app/scripts/models_.
 
 option             | type      | description
@@ -65,7 +64,6 @@ option             | type      | description
 
 
 ### View
-`yo fouraxes:view ...`
 The view generator will create a view, within _app/scripts/views_.
 
 > Note, the _template_ option is ignored when using _withTemplate_.
@@ -79,7 +77,6 @@ option           | type      | description
 
 
 ### Collection
-`yo fouraxes:collection ...`
 The collection generator will create a collection, within _app/scripts/collections_.
 
 > Note, the _model_ option is ignored when using _withModel_.
@@ -92,7 +89,6 @@ option        | type      | description
 
 
 ### Template
-`yo fouraxes:template ...`
 The template generator will create a template, within _app/scripts/templates_.
 
 option       | type      | description
@@ -101,7 +97,6 @@ option       | type      | description
 
 
 ### Router
-`yo fouraxes:router ...`
 The router generator will create a router, within _app/scripts/routers_.
 
 --- ---
