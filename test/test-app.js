@@ -50,7 +50,10 @@ describe('fouraxes:app', function () {
 			'app/scripts/model.js',
 			'app/scripts/view.js',
 			'app/scripts/collection.js',
-			'app/scripts/router.js'
+			'app/scripts/router.js',
+			'app/scripts/config.js',
+			'app/scripts/views/root.js',
+			'app/scripts/templates/root.hbs'
 		]);
 	});
 
