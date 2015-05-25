@@ -42,7 +42,7 @@ module.exports = yeoman.generators.Base.extend({
 		}, {
 			type: 'confirm',
 			name: 'useGitkeeps',
-			message: 'Would you like me to add .gitkeep files to the folders?',
+			message: 'Would you like me to add .gitkeep files to the main app structure?',
 			default: false
 		}];
 
@@ -54,7 +54,7 @@ module.exports = yeoman.generators.Base.extend({
 
 			// change the "root" destination path
 			if (this.props.newDirectory) {
-				this.destinationPath(this.props.appSlug);
+				this.destinationRoot(this.props.appSlug);
 			}
 
 			// tell yeoman we are done
