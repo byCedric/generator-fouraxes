@@ -36,6 +36,11 @@ module.exports = yeoman.generators.Base.extend({
 			message: 'What is the name of your awesome app?'
 		}, {
 			type: 'confirm',
+			name: 'newDirectory',
+			message: 'Would you like me to create everything in a new directory?',
+			default: true
+		}, {
+			type: 'confirm',
 			name: 'useGitkeeps',
 			message: 'Would you like me to add .gitkeep files to the folders?',
 			default: false
@@ -46,6 +51,12 @@ module.exports = yeoman.generators.Base.extend({
 			this.props = props;
 			// add some extra values
 			this.props.appSlug = _.kebabCase(this.props.appName);
+
+			// change the "root" destination path
+			if (this.props.newDirectory) {
+				this.destinationPath(this.props.appSlug);
+			}
+
 			// tell yeoman we are done
 			done();
 		}.bind(this));
