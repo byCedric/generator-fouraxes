@@ -7,7 +7,7 @@ Battle the web with Backbone, Handlebars, Babel (Harmony) and Sass!
 3. [Babel (Harmony)](http://babeljs.io/)
 4. [Sass](http://sass-lang.com/)
 
-It also uses requirejs (AMD) style, but that is build into ECMAScript Harmony.
+It also uses [RequireJS](http://requirejs.org/) (AMD style), but that is build into ECMAScript Harmony.
 
 --- ---
 
