@@ -1,5 +1,13 @@
 # Fouraxes generator [![Build Status](https://img.shields.io/travis/byCedric/generator-fouraxes/develop.svg?style=flat-square)](https://travis-ci.org/byCedric/generator-fouraxes)
-Battle the web with Backbone, Handlebars, RequireJS and Harmony!
+Battle the web with Backbone, Handlebars, Babel (Harmony) and Sass!
+
+### Inside
+1. [Backbone](http://backbonejs.org/)
+2. [Handlebars](http://handlebarsjs.com/)
+3. [Babel (Harmony)](http://babeljs.io/)
+4. [Sass](http://sass-lang.com/)
+
+It also uses requirejs (AMD) style, but that is build into ECMAScript Harmony.
 
 --- ---
 

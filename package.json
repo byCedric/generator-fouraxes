@@ -1,7 +1,7 @@
 {
 	"name": "generator-fouraxes",
 	"version": "0.2.2",
-	"description": "Battle the web with Backbone, Handlebars, RequireJS and Harmony!",
+	"description": "Battle the web with Backbone, Handlebars, Babel (Harmony) and Sass!",
 	"license": "MIT",
 	"main": "app/index.js",
 	"repository": "byCedric/generator-fouraxes",
@@ -17,6 +17,10 @@
 		"generators"
 	],
 	"keywords": [
+		"byCedric",
+		"four",
+		"axes",
+		"fouraxes",
 		"yeoman-generator"
 	],
 	"dependencies": {
