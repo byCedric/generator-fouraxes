@@ -1,6 +1,7 @@
 # Fouraxes generator
 Battle the web with Backbone, Handlebars, RequireJS and Harmony!
 
+--- ---
 
 ## Grunt tasks
 Fouraxes comes with some grunt tasks preinstalled.
@@ -37,6 +38,7 @@ When you only want to check your code for errors, using jshint and jscs, `grunt 
 
 > Note, this will check the _app_ folder **NOT** the _.tmp_ folder.
 
+--- ---
 
 ## Subgenerators
 The Fouraxes generator contains the following subgenerators.
@@ -89,6 +91,7 @@ option       | type      | description
 ### Router
 The router generator will create a router, within _app/scripts/routers_.
 
+--- ---
 
 ## License
 The MIT License (MIT)
