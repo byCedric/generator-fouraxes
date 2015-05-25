@@ -38,7 +38,7 @@ module.exports = yeoman.generators.Base.extend({
 			type: 'confirm',
 			name: 'useGitkeeps',
 			message: 'Would you like me to add .gitkeep files to the folders?',
-			default: true
+			default: false
 		}];
 
 		this.prompt(prompts, function (props) {
@@ -95,9 +95,7 @@ module.exports = yeoman.generators.Base.extend({
 
 		gitkeeps: function () {
 			if (!this.props.useGitkeeps) {
-				return this.log(yosay(
-					'Skipping .gitkeep files... '+ chalk.red('Note, some directories may not be created.')
-				));
+				return this.log(yosay('Skipping .gitkeep files...'));
 			}
 
 			makeFiles({
