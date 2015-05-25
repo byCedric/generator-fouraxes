@@ -1,6 +1,6 @@
 {
 	"name": "generator-fouraxes",
-	"version": "0.0.0",
+	"version": "0.1.1",
 	"description": "Battle the web with Backbone, Handlebars, RequireJS and Harmony!",
 	"license": "MIT",
 	"main": "app/index.js",
