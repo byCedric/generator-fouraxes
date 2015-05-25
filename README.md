@@ -1,4 +1,4 @@
-# Fouraxes generator
+# Fouraxes generator [![Build Status](https://img.shields.io/travis/byCedric/generator-fouraxes/develop.svg?style=flat-square)](https://travis-ci.org/byCedric/generator-fouraxes)
 Battle the web with Backbone, Handlebars, RequireJS and Harmony!
 
 --- ---
